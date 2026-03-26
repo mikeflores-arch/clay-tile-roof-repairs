@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-clay-50: #fdf5ef;
+  --color-clay-100: #f9e6d4;
+  --color-clay-200: #f2c9a5;
+  --color-clay-300: #e8a36f;
+  --color-clay-400: #df7f42;
+  --color-clay-500: #d46428;
+  --color-clay-600: #c54d1e;
+  --color-clay-700: #a3391b;
+  --color-clay-800: #832f1d;
+  --color-clay-900: #6b291b;
+
+  --color-stone-950: #1a1410;
+  --color-warm-50: #fafaf7;
+  --color-warm-100: #f3f1ec;
+  --color-warm-200: #e5e1d8;
+  --color-warm-300: #d2ccc0;
+  --color-warm-400: #b5ad9e;
+  --color-warm-500: #9e9484;
+  --color-warm-600: #8a7f70;
+  --color-warm-700: #73695d;
+  --color-warm-800: #5f574e;
+  --color-warm-900: #4e4842;
+
+  --font-heading: 'Bodoni Moda', serif;
+  --font-body: 'Jost', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: #1a1410;
+  background: #fafaf7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
