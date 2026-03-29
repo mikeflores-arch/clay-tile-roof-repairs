@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Award, Clock, Phone, CheckCircle, ArrowRight, Star, ChevronDown, Search, FileText, Wrench, BadgeCheck } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import ShaderHero from '../components/ShaderHero';
 import SEO from '../components/SEO';
 import { serviceAreas } from '../data/serviceAreas';
 import { faqs } from '../data/faq';
@@ -50,37 +51,36 @@ export default function Home() {
         description="Houston's #1 clay tile roof repair specialists. Serving River Oaks, Memorial Villages, West University, Bellaire, The Woodlands, Sugar Land, Katy & Tanglewood. Free inspections. Call (713) 555-1234."
         path="/"
       />
-      {/* Hero */}
-      <section className="relative min-h-[90vh] flex items-center bg-stone-950 overflow-hidden">
-        <img src="/images/clay-tile-repair.jpg" alt="Clay tile roof repair in Houston" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/95 via-stone-950/80 to-stone-950/40" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-3xl"
-          >
-            <p className="text-clay-400 tracking-[0.3em] uppercase text-sm font-medium mb-6">Houston's Trusted Roofing Specialists</p>
-            <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl text-warm-50 leading-[1.1] mb-6">
-              Expert Clay Tile<br />
-              <span className="text-clay-400">Roof Repair</span>
-            </h1>
-            <p className="text-lg text-warm-400 max-w-xl mb-10 leading-relaxed">
-              Protecting Houston's finest homes for over 15 years. Specialized in clay tile repair, restoration, and replacement for luxury residences.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-clay-600 hover:bg-clay-500 text-white rounded-lg font-semibold transition-colors cursor-pointer">
-                Get a Free Estimate <ArrowRight className="w-5 h-5" />
-              </Link>
-              <a href="tel:+17135551234" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-warm-700 hover:border-warm-500 text-warm-200 rounded-lg font-semibold transition-colors cursor-pointer">
-                <Phone className="w-5 h-5" /> (713) 555-1234
-              </a>
-            </div>
-          </motion.div>
+      {/* Hero with Shader Background */}
+      <ShaderHero>
+        <div className="flex items-center min-h-[90vh]">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="max-w-3xl"
+            >
+              <p className="text-clay-400 tracking-[0.3em] uppercase text-sm font-medium mb-6">Houston's Trusted Roofing Specialists</p>
+              <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl text-warm-50 leading-[1.1] mb-6">
+                Expert Clay Tile<br />
+                <span className="text-clay-400">Roof Repair</span>
+              </h1>
+              <p className="text-lg text-warm-300 max-w-xl mb-10 leading-relaxed">
+                Protecting Houston's finest homes for over 15 years. Specialized in clay tile repair, restoration, and replacement for luxury residences.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-clay-600 hover:bg-clay-500 text-white rounded-lg font-semibold transition-colors cursor-pointer">
+                  Get a Free Estimate <ArrowRight className="w-5 h-5" />
+                </Link>
+                <a href="tel:+17135551234" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-warm-600/50 hover:border-warm-400 text-warm-200 rounded-lg font-semibold transition-colors backdrop-blur-sm cursor-pointer">
+                  <Phone className="w-5 h-5" /> (713) 555-1234
+                </a>
+              </div>
+            </motion.div>
+          </div>
         </div>
-      </section>
+      </ShaderHero>
 
       {/* Stats */}
       <section className="bg-clay-600">
