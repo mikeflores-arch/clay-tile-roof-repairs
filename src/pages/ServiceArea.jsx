@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, MapPin, Home, Shield } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import { serviceAreas } from '../data/serviceAreas';
 
 export default function ServiceArea() {
@@ -11,11 +12,28 @@ export default function ServiceArea() {
 
   const otherAreas = serviceAreas.filter((a) => a.slug !== slug);
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://claytileroofrepairs.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://claytileroofrepairs.com/' },
+      { '@type': 'ListItem', position: 3, name: area.name, item: `https://claytileroofrepairs.com/service-area/${area.slug}` },
+    ],
+  };
+
   return (
     <>
+      <SEO
+        title={`Clay Tile Roof Repair ${area.name} TX | Houston's #1 Tile Roofer`}
+        description={`Expert clay tile roof repair in ${area.name}, Houston. ${area.features[0]}, ${area.features[1].toLowerCase()}, and more. Free inspections. Homes from ${area.median_home}. Call (713) 555-1234.`}
+        path={`/service-area/${area.slug}`}
+        image={`https://claytileroofrepairs.com${area.image}`}
+        schema={breadcrumbSchema}
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-stone-950">
-        <img src={area.image} alt={`Clay tile roofing in ${area.name}`} className="absolute inset-0 w-full h-full object-cover" />
+        <img src={area.image} alt={`Clay tile roof repair in ${area.name} Houston TX`} className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950/95 via-stone-950/85 to-stone-950/50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 text-warm-500 text-sm mb-4">

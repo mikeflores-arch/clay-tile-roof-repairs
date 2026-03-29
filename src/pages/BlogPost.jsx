@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import { blogPosts } from '../data/blog';
 
 export default function BlogPost() {
@@ -9,8 +10,34 @@ export default function BlogPost() {
 
   if (!post) return <Navigate to="/blog" replace />;
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://claytileroofrepairs.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://claytileroofrepairs.com/blog' },
+      { '@type': 'ListItem', position: 3, name: post.title, item: `https://claytileroofrepairs.com/blog/${post.slug}` },
+    ],
+  };
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: { '@type': 'Organization', name: 'Clay Tile Roof Repairs' },
+    publisher: { '@type': 'Organization', name: 'Clay Tile Roof Repairs' },
+  };
+
   return (
     <>
+      <SEO
+        title={`${post.title} | Clay Tile Roof Repairs`}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+        schema={[breadcrumbSchema, articleSchema]}
+      />
       <section className="relative pt-32 pb-16 bg-stone-950">
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950 to-clay-900/20" />
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">

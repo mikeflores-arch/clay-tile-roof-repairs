@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Shield, Award, Clock, Phone, CheckCircle, ArrowRight, Star, ChevronDown, Search, FileText, Wrench, BadgeCheck } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 import { serviceAreas } from '../data/serviceAreas';
 import { faqs } from '../data/faq';
 
@@ -44,6 +45,11 @@ function FaqItem({ question, answer }) {
 export default function Home() {
   return (
     <>
+      <SEO
+        title="Clay Tile Roof Repairs Houston | Expert Repair & Restoration"
+        description="Houston's #1 clay tile roof repair specialists. Serving River Oaks, Memorial Villages, West University, Bellaire, The Woodlands, Sugar Land, Katy & Tanglewood. Free inspections. Call (713) 555-1234."
+        path="/"
+      />
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center bg-stone-950 overflow-hidden">
         <img src="/images/clay-tile-repair.jpg" alt="Clay tile roof repair in Houston" className="absolute inset-0 w-full h-full object-cover" />

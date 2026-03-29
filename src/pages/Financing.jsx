@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle, CreditCard, Calendar, Shield } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 
 export default function Financing() {
   return (
     <>
+      <SEO
+        title="Roof Repair Financing Houston | 0% Interest Options Available"
+        description="Flexible financing for clay tile roof repairs in Houston. 0% interest options, quick approval, terms from 12-120 months. Don't delay repairs — protect your home now."
+        path="/financing"
+      />
       <section className="relative pt-32 pb-20 bg-stone-950">
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950 to-clay-900/20" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

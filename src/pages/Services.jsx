@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 
 const services = [
   {
@@ -38,6 +39,11 @@ const services = [
 export default function Services() {
   return (
     <>
+      <SEO
+        title="Clay Tile Roofing Services Houston | Repair, Replacement & Inspection"
+        description="Full-service clay tile roofing in Houston. Tile repair, replacement, storm damage restoration, inspections & maintenance. Licensed, insured, 15+ years experience."
+        path="/services"
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-stone-950">
         <img src="/images/clay-tile-repair-houston.jpg" alt="Clay tile roofing services Houston" className="absolute inset-0 w-full h-full object-cover" />

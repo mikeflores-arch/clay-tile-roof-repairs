@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -12,6 +13,11 @@ export default function Contact() {
 
   return (
     <>
+      <SEO
+        title="Contact Clay Tile Roof Repairs | Free Houston Roof Inspection"
+        description="Get a free clay tile roof inspection in Houston. Call (713) 555-1234 or fill out our form. 24-hour response. Serving River Oaks, Memorial Villages, West U & more."
+        path="/contact"
+      />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-stone-950">
         <img src="/images/clay-tile-repair-montrose.jpg" alt="Clay tile roof repair in progress" className="absolute inset-0 w-full h-full object-cover" />
