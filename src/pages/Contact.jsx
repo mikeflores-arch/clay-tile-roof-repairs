@@ -6,10 +6,26 @@ import { localBusinessSchema, breadcrumbSchema } from '../data/schemas';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSending(true);
+    setError(false);
+    try {
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(e.target)).toString(),
+      });
+      if (!res.ok) throw new Error(`Form POST failed: ${res.status}`);
+      setSubmitted(true);
+    } catch {
+      setError(true);
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -56,34 +72,45 @@ export default function Contact() {
                       <p className="text-warm-600">We've received your request and will contact you within 24 hours.</p>
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form
+                      name="contact"
+                      method="POST"
+                      data-netlify="true"
+                      netlify-honeypot="bot-field"
+                      onSubmit={handleSubmit}
+                      className="space-y-6"
+                    >
+                      <input type="hidden" name="form-name" value="contact" />
+                      <p className="hidden" aria-hidden="true">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                      </p>
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
                           <label htmlFor="firstName" className="block text-sm font-medium text-stone-950 mb-2">First Name</label>
-                          <input type="text" id="firstName" required className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
+                          <input type="text" id="firstName" name="firstName" required className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
                         </div>
                         <div>
                           <label htmlFor="lastName" className="block text-sm font-medium text-stone-950 mb-2">Last Name</label>
-                          <input type="text" id="lastName" required className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
+                          <input type="text" id="lastName" name="lastName" required className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
                         </div>
                       </div>
                       <div className="grid sm:grid-cols-2 gap-6">
                         <div>
                           <label htmlFor="email" className="block text-sm font-medium text-stone-950 mb-2">Email</label>
-                          <input type="email" id="email" required className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
+                          <input type="email" id="email" name="email" required className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
                         </div>
                         <div>
                           <label htmlFor="phone" className="block text-sm font-medium text-stone-950 mb-2">Phone</label>
-                          <input type="tel" id="phone" className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
+                          <input type="tel" id="phone" name="phone" className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
                         </div>
                       </div>
                       <div>
                         <label htmlFor="neighborhood" className="block text-sm font-medium text-stone-950 mb-2">Neighborhood / City</label>
-                        <input type="text" id="neighborhood" placeholder="e.g., River Oaks, Memorial, West U" className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
+                        <input type="text" id="neighborhood" name="neighborhood" placeholder="e.g., River Oaks, Memorial, West U" className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50" />
                       </div>
                       <div>
                         <label htmlFor="service" className="block text-sm font-medium text-stone-950 mb-2">Service Needed</label>
-                        <select id="service" className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50">
+                        <select id="service" name="service" className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50">
                           <option value="">Select a service...</option>
                           <option>Clay Tile Repair</option>
                           <option>Full Roof Replacement</option>
@@ -96,10 +123,16 @@ export default function Contact() {
                       </div>
                       <div>
                         <label htmlFor="message" className="block text-sm font-medium text-stone-950 mb-2">Message</label>
-                        <textarea id="message" rows={4} placeholder="Tell us about your project..." className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50 resize-none" />
+                        <textarea id="message" name="message" rows={4} placeholder="Tell us about your project..." className="w-full px-4 py-3 rounded-lg border border-warm-200 focus:border-clay-500 focus:ring-2 focus:ring-clay-500/20 outline-none transition-all bg-warm-50 resize-none" />
                       </div>
-                      <button type="submit" className="w-full sm:w-auto px-8 py-4 bg-clay-600 hover:bg-clay-500 text-white rounded-lg font-semibold transition-colors cursor-pointer flex items-center justify-center gap-2">
-                        <Send className="w-5 h-5" /> Send Request
+                      {error && (
+                        <p className="text-red-600 text-sm">
+                          Something went wrong sending your request. Please try again, or call us at{' '}
+                          <a href="tel:+12819369337" className="font-semibold underline">(281) 936-9337</a>.
+                        </p>
+                      )}
+                      <button type="submit" disabled={sending} className="w-full sm:w-auto px-8 py-4 bg-clay-600 hover:bg-clay-500 disabled:opacity-60 disabled:cursor-not-allowed text-white rounded-lg font-semibold transition-colors cursor-pointer flex items-center justify-center gap-2">
+                        <Send className="w-5 h-5" /> {sending ? 'Sending…' : 'Send Request'}
                       </button>
                     </form>
                   )}
