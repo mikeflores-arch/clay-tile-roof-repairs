@@ -16,7 +16,7 @@ export default function Contact() {
     <>
       <SEO
         title="Contact Clay Tile Roof Repairs | Free Houston Roof Inspection"
-        description="Get a free clay tile roof inspection in Houston. Call (713) 555-1234 or fill out our form. 24-hour response. Serving River Oaks, Memorial Villages, West U & more."
+        description="Get a free clay tile roof inspection in Houston. Call (281) 936-9337 or fill out our form. 24-hour response. Serving River Oaks, Memorial Villages, West U & more."
         path="/contact"
         schema={[
           localBusinessSchema(),
@@ -113,12 +113,12 @@ export default function Contact() {
                 <div className="bg-white rounded-2xl border border-warm-200 p-8">
                   <h3 className="font-heading text-xl text-stone-950 mb-6">Contact Information</h3>
                   <div className="space-y-5">
-                    <a href="tel:+17135551234" className="flex items-start gap-4 group cursor-pointer">
+                    <a href="tel:+12819369337" className="flex items-start gap-4 group cursor-pointer">
                       <div className="w-10 h-10 rounded-lg bg-clay-50 flex items-center justify-center flex-shrink-0">
                         <Phone className="w-5 h-5 text-clay-600" />
                       </div>
                       <div>
-                        <p className="font-medium text-stone-950 group-hover:text-clay-600 transition-colors">(713) 555-1234</p>
+                        <p className="font-medium text-stone-950 group-hover:text-clay-600 transition-colors">(281) 936-9337</p>
                         <p className="text-sm text-warm-500">Call or text anytime</p>
                       </div>
                     </a>
@@ -163,7 +163,7 @@ export default function Contact() {
                 <div className="bg-stone-950 rounded-2xl p-8 text-center">
                   <h3 className="font-heading text-xl text-warm-50 mb-3">Emergency?</h3>
                   <p className="text-warm-400 text-sm mb-4">Storm damage? Active leak? Call our emergency line now.</p>
-                  <a href="tel:+17135551234" className="inline-flex items-center gap-2 px-6 py-3 bg-clay-600 hover:bg-clay-500 text-white rounded-lg font-semibold transition-colors cursor-pointer">
+                  <a href="tel:+12819369337" className="inline-flex items-center gap-2 px-6 py-3 bg-clay-600 hover:bg-clay-500 text-white rounded-lg font-semibold transition-colors cursor-pointer">
                     <Phone className="w-5 h-5" /> Emergency Line
                   </a>
                 </div>

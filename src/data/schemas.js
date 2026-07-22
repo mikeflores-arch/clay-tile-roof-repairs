@@ -3,8 +3,7 @@
 
 export const SITE_URL = 'https://claytileroofrepairs.com';
 export const SITE_NAME = 'Clay Tile Roof Repairs';
-// TODO: placeholder contact data — replace with real phone/email before launch marketing
-export const PHONE = '+1-713-555-1234';
+export const PHONE = '+1-281-936-9337'; // call tracking number
 export const EMAIL = 'info@claytileroofrepairs.com';
 
 const url = (path) => (path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}/`);

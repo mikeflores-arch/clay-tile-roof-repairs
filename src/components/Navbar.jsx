@@ -69,9 +69,9 @@ export default function Navbar() {
 
           {/* CTA + Mobile Toggle */}
           <div className="flex items-center gap-3">
-            <a href="tel:+17135551234" className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-clay-600 hover:bg-clay-500 text-white rounded-lg text-sm font-semibold transition-colors cursor-pointer">
+            <a href="tel:+12819369337" className="hidden sm:flex items-center gap-2 px-5 py-2.5 bg-clay-600 hover:bg-clay-500 text-white rounded-lg text-sm font-semibold transition-colors cursor-pointer">
               <Phone className="w-4 h-4" />
-              (713) 555-1234
+              (281) 936-9337
             </a>
             <button onClick={() => setMobileOpen(!mobileOpen)} className="lg:hidden p-2 text-warm-300 hover:text-warm-50 cursor-pointer">
               {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -100,8 +100,8 @@ export default function Navbar() {
             <Link to="/blog" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-lg text-warm-200 hover:bg-clay-900/20 transition-colors">Blog</Link>
             <Link to="/financing" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-lg text-warm-200 hover:bg-clay-900/20 transition-colors">Financing</Link>
             <Link to="/contact" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-lg text-warm-200 hover:bg-clay-900/20 transition-colors">Contact</Link>
-            <a href="tel:+17135551234" className="block px-4 py-3 mt-2 bg-clay-600 text-white text-center rounded-lg font-semibold">
-              Call (713) 555-1234
+            <a href="tel:+12819369337" className="block px-4 py-3 mt-2 bg-clay-600 text-white text-center rounded-lg font-semibold">
+              Call (281) 936-9337
             </a>
           </div>
         </div>

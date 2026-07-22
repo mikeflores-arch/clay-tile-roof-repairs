@@ -48,7 +48,7 @@ export default function Home() {
     <>
       <SEO
         title="Clay Tile Roof Repairs Houston | Expert Repair & Restoration"
-        description="Houston's #1 clay tile roof repair specialists. Serving River Oaks, Memorial Villages, West University, Bellaire, The Woodlands, Sugar Land, Katy & Tanglewood. Free inspections. Call (713) 555-1234."
+        description="Houston's #1 clay tile roof repair specialists. Serving River Oaks, Memorial Villages, West University, Bellaire, The Woodlands, Sugar Land, Katy & Tanglewood. Free inspections. Call (281) 936-9337."
         path="/"
         schema={[localBusinessSchema(), webSiteSchema(), faqSchema(faqs.slice(0, 6))]}
       />
@@ -76,8 +76,8 @@ export default function Home() {
               <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-clay-600 hover:bg-clay-500 text-white rounded-lg font-semibold transition-colors cursor-pointer">
                 Get a Free Estimate <ArrowRight className="w-5 h-5" />
               </Link>
-              <a href="tel:+17135551234" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-warm-700 hover:border-warm-500 text-warm-200 rounded-lg font-semibold transition-colors cursor-pointer">
-                <Phone className="w-5 h-5" /> (713) 555-1234
+              <a href="tel:+12819369337" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-warm-700 hover:border-warm-500 text-warm-200 rounded-lg font-semibold transition-colors cursor-pointer">
+                <Phone className="w-5 h-5" /> (281) 936-9337
               </a>
             </div>
           </motion.div>
@@ -142,11 +142,8 @@ export default function Home() {
           <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-16 opacity-70">
             {[
               'Licensed & Insured',
-              'BBB A+ Rated',
               'GAF Certified',
-              'Texas TRCC Licensed',
               '5-Star Google Rating',
-              'Angi Certified',
             ].map((badge) => (
               <div key={badge} className="flex items-center gap-2 text-warm-600">
                 <BadgeCheck className="w-5 h-5 text-clay-600" />
@@ -350,8 +347,8 @@ export default function Home() {
               <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-clay-700 hover:bg-warm-100 rounded-lg font-semibold transition-colors cursor-pointer">
                 Schedule Free Inspection <ArrowRight className="w-5 h-5" />
               </Link>
-              <a href="tel:+17135551234" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 hover:border-white text-white rounded-lg font-semibold transition-colors cursor-pointer">
-                <Phone className="w-5 h-5" /> (713) 555-1234
+              <a href="tel:+12819369337" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 hover:border-white text-white rounded-lg font-semibold transition-colors cursor-pointer">
+                <Phone className="w-5 h-5" /> (281) 936-9337
               </a>
             </div>
           </ScrollReveal>

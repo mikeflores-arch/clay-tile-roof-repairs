@@ -72,8 +72,8 @@ export default function Financing() {
                 <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-clay-600 hover:bg-clay-500 text-white rounded-lg font-semibold transition-colors cursor-pointer">
                   Get Free Estimate <ArrowRight className="w-5 h-5" />
                 </Link>
-                <a href="tel:+17135551234" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-warm-700 hover:border-warm-500 text-warm-200 rounded-lg font-semibold transition-colors cursor-pointer">
-                  <Phone className="w-5 h-5" /> (713) 555-1234
+                <a href="tel:+12819369337" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-warm-700 hover:border-warm-500 text-warm-200 rounded-lg font-semibold transition-colors cursor-pointer">
+                  <Phone className="w-5 h-5" /> (281) 936-9337
                 </a>
               </div>
             </div>

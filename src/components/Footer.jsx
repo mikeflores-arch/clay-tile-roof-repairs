@@ -14,8 +14,8 @@ export default function Footer() {
               Houston's premier clay tile roof repair specialists. Over 15 years of experience protecting the area's finest homes.
             </p>
             <div className="space-y-3 text-sm">
-              <a href="tel:+17135551234" className="flex items-center gap-2 hover:text-clay-400 transition-colors cursor-pointer">
-                <Phone className="w-4 h-4 text-clay-500" /> (713) 555-1234
+              <a href="tel:+12819369337" className="flex items-center gap-2 hover:text-clay-400 transition-colors cursor-pointer">
+                <Phone className="w-4 h-4 text-clay-500" /> (281) 936-9337
               </a>
               <a href="mailto:info@claytileroofrepairs.com" className="flex items-center gap-2 hover:text-clay-400 transition-colors cursor-pointer">
                 <Mail className="w-4 h-4 text-clay-500" /> info@claytileroofrepairs.com
@@ -69,7 +69,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-warm-900/50 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-warm-600">
           <p>&copy; {new Date().getFullYear()} Clay Tile Roof Repairs. All rights reserved.</p>
-          <p>Licensed &amp; Insured | TRCC #12345</p>
+          <p>Licensed &amp; Insured</p>
         </div>
       </div>
     </footer>

@@ -17,7 +17,7 @@ export default function ServiceArea() {
     <>
       <SEO
         title={`Clay Tile Roof Repair ${area.name} TX | Houston's #1 Tile Roofer`}
-        description={`Expert clay tile roof repair in ${area.name}, Houston. ${area.features[0]}, ${area.features[1].toLowerCase()}, and more. Free inspections. Homes from ${area.median_home}. Call (713) 555-1234.`}
+        description={`Expert clay tile roof repair in ${area.name}, Houston. ${area.features[0]}, ${area.features[1].toLowerCase()}, and more. Free inspections. Homes from ${area.median_home}. Call (281) 936-9337.`}
         path={`/service-area/${area.slug}`}
         image={`https://claytileroofrepairs.com${area.image}`}
         schema={[
@@ -51,8 +51,8 @@ export default function ServiceArea() {
             <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-clay-600 hover:bg-clay-500 text-white rounded-lg font-semibold transition-colors cursor-pointer">
               Get a Free Estimate <ArrowRight className="w-5 h-5" />
             </Link>
-            <a href="tel:+17135551234" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-warm-700 hover:border-warm-500 text-warm-200 rounded-lg font-semibold transition-colors cursor-pointer">
-              <Phone className="w-5 h-5" /> (713) 555-1234
+            <a href="tel:+12819369337" className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-warm-700 hover:border-warm-500 text-warm-200 rounded-lg font-semibold transition-colors cursor-pointer">
+              <Phone className="w-5 h-5" /> (281) 936-9337
             </a>
           </div>
         </div>
@@ -168,8 +168,8 @@ export default function ServiceArea() {
               <Link to="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-clay-700 hover:bg-warm-100 rounded-lg font-semibold transition-colors cursor-pointer">
                 Get Free Estimate <ArrowRight className="w-5 h-5" />
               </Link>
-              <a href="tel:+17135551234" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 hover:border-white text-white rounded-lg font-semibold transition-colors cursor-pointer">
-                <Phone className="w-5 h-5" /> (713) 555-1234
+              <a href="tel:+12819369337" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/40 hover:border-white text-white rounded-lg font-semibold transition-colors cursor-pointer">
+                <Phone className="w-5 h-5" /> (281) 936-9337
               </a>
             </div>
           </ScrollReveal>
