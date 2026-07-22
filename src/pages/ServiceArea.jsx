@@ -3,6 +3,7 @@ import { ArrowRight, Phone, CheckCircle, MapPin, Home, Shield } from 'lucide-rea
 import ScrollReveal from '../components/ScrollReveal';
 import SEO from '../components/SEO';
 import { serviceAreas } from '../data/serviceAreas';
+import { breadcrumbSchema, serviceSchema } from '../data/schemas';
 
 export default function ServiceArea() {
   const { slug } = useParams();
@@ -12,16 +13,6 @@ export default function ServiceArea() {
 
   const otherAreas = serviceAreas.filter((a) => a.slug !== slug);
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://claytileroofrepairs.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Service Areas', item: 'https://claytileroofrepairs.com/' },
-      { '@type': 'ListItem', position: 3, name: area.name, item: `https://claytileroofrepairs.com/service-area/${area.slug}` },
-    ],
-  };
-
   return (
     <>
       <SEO
@@ -29,7 +20,17 @@ export default function ServiceArea() {
         description={`Expert clay tile roof repair in ${area.name}, Houston. ${area.features[0]}, ${area.features[1].toLowerCase()}, and more. Free inspections. Homes from ${area.median_home}. Call (713) 555-1234.`}
         path={`/service-area/${area.slug}`}
         image={`https://claytileroofrepairs.com${area.image}`}
-        schema={breadcrumbSchema}
+        schema={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: area.name, path: `/service-area/${area.slug}` },
+          ]),
+          serviceSchema({
+            name: `Clay Tile Roof Repair in ${area.name}`,
+            description: area.description,
+            path: `/service-area/${area.slug}`,
+          }),
+        ]}
       />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-stone-950">

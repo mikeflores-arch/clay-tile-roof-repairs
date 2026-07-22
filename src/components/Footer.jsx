@@ -17,8 +17,8 @@ export default function Footer() {
               <a href="tel:+17135551234" className="flex items-center gap-2 hover:text-clay-400 transition-colors cursor-pointer">
                 <Phone className="w-4 h-4 text-clay-500" /> (713) 555-1234
               </a>
-              <a href="mailto:info@houstonclayroofing.com" className="flex items-center gap-2 hover:text-clay-400 transition-colors cursor-pointer">
-                <Mail className="w-4 h-4 text-clay-500" /> info@houstonclayroofing.com
+              <a href="mailto:info@claytileroofrepairs.com" className="flex items-center gap-2 hover:text-clay-400 transition-colors cursor-pointer">
+                <Mail className="w-4 h-4 text-clay-500" /> info@claytileroofrepairs.com
               </a>
               <p className="flex items-center gap-2">
                 <MapPin className="w-4 h-4 text-clay-500" /> Houston, TX

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import SEO from '../components/SEO';
+import { localBusinessSchema, breadcrumbSchema } from '../data/schemas';
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -17,6 +18,13 @@ export default function Contact() {
         title="Contact Clay Tile Roof Repairs | Free Houston Roof Inspection"
         description="Get a free clay tile roof inspection in Houston. Call (713) 555-1234 or fill out our form. 24-hour response. Serving River Oaks, Memorial Villages, West U & more."
         path="/contact"
+        schema={[
+          localBusinessSchema(),
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Contact', path: '/contact' },
+          ]),
+        ]}
       />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-stone-950">
@@ -114,12 +122,12 @@ export default function Contact() {
                         <p className="text-sm text-warm-500">Call or text anytime</p>
                       </div>
                     </a>
-                    <a href="mailto:info@houstonclayroofing.com" className="flex items-start gap-4 group cursor-pointer">
+                    <a href="mailto:info@claytileroofrepairs.com" className="flex items-start gap-4 group cursor-pointer">
                       <div className="w-10 h-10 rounded-lg bg-clay-50 flex items-center justify-center flex-shrink-0">
                         <Mail className="w-5 h-5 text-clay-600" />
                       </div>
                       <div>
-                        <p className="font-medium text-stone-950 group-hover:text-clay-600 transition-colors">info@houstonclayroofing.com</p>
+                        <p className="font-medium text-stone-950 group-hover:text-clay-600 transition-colors">info@claytileroofrepairs.com</p>
                         <p className="text-sm text-warm-500">24-hour response</p>
                       </div>
                     </a>

@@ -9,6 +9,7 @@ import ServiceArea from './pages/ServiceArea';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Financing from './pages/Financing';
+import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +31,7 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/financing" element={<Financing />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

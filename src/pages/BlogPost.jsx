@@ -3,6 +3,51 @@ import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import SEO from '../components/SEO';
 import { blogPosts } from '../data/blog';
+import { breadcrumbSchema, articleSchema } from '../data/schemas';
+
+// Group raw markdown-ish lines into blocks so tables render as real tables
+function parseBlocks(content) {
+  const lines = content.split('\n').map((l) => l.trim()).filter(Boolean);
+  const blocks = [];
+  for (const line of lines) {
+    const last = blocks[blocks.length - 1];
+    if (line.startsWith('| ')) {
+      if (last && last.type === 'table') last.rows.push(line);
+      else blocks.push({ type: 'table', rows: [line] });
+    } else {
+      blocks.push({ type: 'line', text: line });
+    }
+  }
+  return blocks;
+}
+
+function TableBlock({ rows }) {
+  const cells = (row) => row.split('|').map((c) => c.trim()).filter(Boolean);
+  const header = cells(rows[0]);
+  const body = rows.slice(1).filter((r) => !/^\|[\s|:-]+\|?$/.test(r.replace(/ /g, ''))).map(cells);
+  return (
+    <div className="overflow-x-auto my-8">
+      <table className="w-full text-left border border-warm-200 rounded-lg overflow-hidden">
+        <thead className="bg-warm-100">
+          <tr>
+            {header.map((h) => (
+              <th key={h} className="px-4 py-3 font-semibold text-stone-950 text-sm">{h}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {body.map((row, i) => (
+            <tr key={i} className="border-t border-warm-100">
+              {row.map((cell, j) => (
+                <td key={j} className="px-4 py-3 text-warm-700 text-sm">{cell}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -10,33 +55,20 @@ export default function BlogPost() {
 
   if (!post) return <Navigate to="/blog" replace />;
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://claytileroofrepairs.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://claytileroofrepairs.com/blog' },
-      { '@type': 'ListItem', position: 3, name: post.title, item: `https://claytileroofrepairs.com/blog/${post.slug}` },
-    ],
-  };
-
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt,
-    datePublished: post.date,
-    author: { '@type': 'Organization', name: 'Clay Tile Roof Repairs' },
-    publisher: { '@type': 'Organization', name: 'Clay Tile Roof Repairs' },
-  };
-
   return (
     <>
       <SEO
         title={`${post.title} | Clay Tile Roof Repairs`}
         description={post.excerpt}
         path={`/blog/${post.slug}`}
-        schema={[breadcrumbSchema, articleSchema]}
+        schema={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Blog', path: '/blog' },
+            { name: post.title, path: `/blog/${post.slug}` },
+          ]),
+          articleSchema(post),
+        ]}
       />
       <section className="relative pt-32 pb-16 bg-stone-950">
         <div className="absolute inset-0 bg-gradient-to-b from-stone-950 to-clay-900/20" />
@@ -57,9 +89,9 @@ export default function BlogPost() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <article className="bg-white rounded-2xl border border-warm-200 p-8 lg:p-12 prose-custom">
-              {post.content.split('\n').map((line, i) => {
-                const trimmed = line.trim();
-                if (!trimmed) return null;
+              {parseBlocks(post.content).map((block, i) => {
+                if (block.type === 'table') return <TableBlock key={i} rows={block.rows} />;
+                const trimmed = block.text;
                 if (trimmed.startsWith('## '))
                   return <h2 key={i} className="font-heading text-2xl text-stone-950 mt-10 mb-4">{trimmed.slice(3)}</h2>;
                 if (trimmed.startsWith('### '))
@@ -70,8 +102,6 @@ export default function BlogPost() {
                   return <p key={i} className="text-warm-700 leading-relaxed ml-4 mb-1">{trimmed.slice(2).split('**').map((part, j) => j % 2 === 1 ? <strong key={j} className="text-stone-950">{part}</strong> : part)}</p>;
                 if (trimmed.startsWith('- '))
                   return <p key={i} className="text-warm-700 leading-relaxed ml-4 mb-1">&#8226; {trimmed.slice(2)}</p>;
-                if (trimmed.startsWith('| '))
-                  return null; // skip table rows for simplicity
                 if (trimmed.match(/^\d+\. /))
                   return <p key={i} className="text-warm-700 leading-relaxed ml-4 mb-2">{trimmed}</p>;
                 return <p key={i} className="text-warm-700 leading-relaxed mb-4">{trimmed.split('**').map((part, j) => j % 2 === 1 ? <strong key={j} className="text-stone-950">{part}</strong> : part)}</p>;

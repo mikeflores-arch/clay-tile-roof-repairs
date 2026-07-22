@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import SEO from '../components/SEO';
+import { breadcrumbSchema, serviceSchema } from '../data/schemas';
 
 const services = [
   {
@@ -43,6 +44,15 @@ export default function Services() {
         title="Clay Tile Roofing Services Houston | Repair, Replacement & Inspection"
         description="Full-service clay tile roofing in Houston. Tile repair, replacement, storm damage restoration, inspections & maintenance. Licensed, insured, 15+ years experience."
         path="/services"
+        schema={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+          ]),
+          ...services.map((s) =>
+            serviceSchema({ name: s.title, description: s.desc, path: '/services' }),
+          ),
+        ]}
       />
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-stone-950">

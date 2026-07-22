@@ -6,6 +6,7 @@ import ScrollReveal from '../components/ScrollReveal';
 import SEO from '../components/SEO';
 import { serviceAreas } from '../data/serviceAreas';
 import { faqs } from '../data/faq';
+import { localBusinessSchema, webSiteSchema, faqSchema } from '../data/schemas';
 
 const services = [
   { title: 'Clay Tile Repair', desc: 'Expert repair of cracked, broken, or displaced clay tiles. We match existing tiles perfectly for seamless results.', icon: '01' },
@@ -49,6 +50,7 @@ export default function Home() {
         title="Clay Tile Roof Repairs Houston | Expert Repair & Restoration"
         description="Houston's #1 clay tile roof repair specialists. Serving River Oaks, Memorial Villages, West University, Bellaire, The Woodlands, Sugar Land, Katy & Tanglewood. Free inspections. Call (713) 555-1234."
         path="/"
+        schema={[localBusinessSchema(), webSiteSchema(), faqSchema(faqs.slice(0, 6))]}
       />
       {/* Hero */}
       <section className="relative min-h-[90vh] flex items-center bg-stone-950 overflow-hidden">

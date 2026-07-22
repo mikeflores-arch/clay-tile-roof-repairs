@@ -1,9 +1,7 @@
 import { Helmet } from 'react-helmet-async';
+import { SITE_URL, SITE_NAME } from '../data/schemas';
 
-const SITE_NAME = 'Clay Tile Roof Repairs';
-const SITE_URL = 'https://claytileroofrepairs.com';
 const DEFAULT_IMAGE = `${SITE_URL}/images/clay-tile-repair.jpg`;
-const PHONE = '(713) 555-1234';
 
 export default function SEO({
   title,
@@ -11,15 +9,18 @@ export default function SEO({
   path = '/',
   image = DEFAULT_IMAGE,
   schema = null,
+  noindex = false,
 }) {
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
-  const url = `${SITE_URL}${path}`;
+  // Netlify serves prerendered directory pages at trailing-slash URLs — canonicals must match
+  const url = path === '/' ? `${SITE_URL}/` : `${SITE_URL}${path}/`;
 
   return (
     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
+      {noindex && <meta name="robots" content="noindex" />}
 
       {/* Open Graph */}
       <meta property="og:type" content="website" />
