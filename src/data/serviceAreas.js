@@ -1,7 +1,11 @@
 // Service-area data. `localContext` paragraphs and per-area `faqs` are the
 // anti-template layer — every area gets genuinely local prose (housing stock,
 // tile profiles, failure modes) rather than a city name swapped into a shell.
-export const serviceAreas = [
+// Expansion areas (22 more, added Aug 2026) live in serviceAreasExpansion1/2.js.
+import { expansionAreas1 } from './serviceAreasExpansion1.js';
+import { expansionAreas2 } from './serviceAreasExpansion2.js';
+
+const coreAreas = [
   {
     slug: 'river-oaks',
     name: 'River Oaks',
@@ -283,3 +287,5 @@ export const serviceAreas = [
     image: '/images/clay-tile-roof-repair-services.jpg',
   },
 ];
+
+export const serviceAreas = [...coreAreas, ...expansionAreas1, ...expansionAreas2];

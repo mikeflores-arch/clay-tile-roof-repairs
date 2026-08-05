@@ -42,7 +42,7 @@ export default function Navbar() {
                 Service Areas <ChevronDown className={`w-4 h-4 transition-transform ${areasOpen ? 'rotate-180' : ''}`} />
               </button>
               {areasOpen && (
-                <div className="absolute top-full left-0 mt-1 w-64 bg-stone-950/98 backdrop-blur-xl border border-clay-900/40 rounded-xl shadow-2xl py-2 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute top-full left-0 mt-1 w-64 max-h-[70vh] overflow-y-auto bg-stone-950/98 backdrop-blur-xl border border-clay-900/40 rounded-xl shadow-2xl py-2 animate-in fade-in slide-in-from-top-2 duration-200">
                   {serviceAreas.map((area) => (
                     <Link
                       key={area.slug}

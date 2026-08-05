@@ -1,5 +1,6 @@
 // Centralized Schema.org builders. Every page injects only the schema that
 // matches its rendered content (baked into static HTML at prerender time).
+import { serviceAreas } from './serviceAreas.js';
 
 export const SITE_URL = 'https://claytileroofrepairs.com';
 export const SITE_NAME = 'Clay Tile Roof Repairs';
@@ -37,14 +38,7 @@ export function localBusinessSchema() {
     ],
     areaServed: [
       { '@type': 'City', name: 'Houston' },
-      { '@type': 'Place', name: 'River Oaks' },
-      { '@type': 'Place', name: 'Memorial Villages' },
-      { '@type': 'City', name: 'West University Place' },
-      { '@type': 'City', name: 'Bellaire' },
-      { '@type': 'Place', name: 'The Woodlands' },
-      { '@type': 'City', name: 'Sugar Land' },
-      { '@type': 'City', name: 'Katy' },
-      { '@type': 'Place', name: 'Tanglewood' },
+      ...serviceAreas.map((a) => ({ '@type': 'Place', name: a.name })),
     ],
     priceRange: '$$',
     // TODO(Mike): add sameAs once GBP / Facebook profiles exist —
@@ -66,7 +60,7 @@ export function localBusinessSchema() {
       'Storm damage insurance claims',
     ],
     description:
-      "Houston's premier clay tile roof repair and restoration specialists. Over 15 years of experience serving River Oaks, Memorial Villages, West University, Bellaire, The Woodlands, Sugar Land, Katy, and Tanglewood.",
+      "Houston's premier clay tile roof repair and restoration specialists. Over 15 years of experience serving 30 Houston-area neighborhoods, from River Oaks and the Museum District to The Woodlands, Sugar Land, and Clear Lake.",
   };
 }
 
