@@ -3,6 +3,7 @@ import { ArrowRight, Calendar, Clock } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import SEO from '../components/SEO';
 import { blogPosts } from '../data/blog';
+import { blogIndexSchema, breadcrumbSchema } from '../data/schemas';
 
 export default function Blog() {
   return (
@@ -11,6 +12,13 @@ export default function Blog() {
         title="Clay Tile Roofing Blog | Houston Roof Care Tips & Expert Guides"
         description="Expert advice on clay tile roof care, maintenance, repair costs, and storm damage in Houston. Tips from Houston's leading tile roofing specialists."
         path="/blog"
+        schema={[
+          breadcrumbSchema([
+            { name: 'Home', path: '/' },
+            { name: 'Blog', path: '/blog' },
+          ]),
+          blogIndexSchema(blogPosts),
+        ]}
       />
       <section className="relative pt-32 pb-20 bg-stone-950">
         <img src="/images/clay-tile-repair-sugarland.jpg" alt="Clay tile roofing blog" className="absolute inset-0 w-full h-full object-cover" />

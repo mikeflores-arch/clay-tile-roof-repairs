@@ -2,7 +2,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Phone, CheckCircle } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
 import SEO from '../components/SEO';
-import { breadcrumbSchema, serviceSchema } from '../data/schemas';
+import { breadcrumbSchema, serviceSchema, faqSchema } from '../data/schemas';
+import { faqs } from '../data/faq';
+
+// Service-relevant subset of the site FAQ, rendered + marked up on this page.
+const servicesFaqs = faqs.slice(0, 4);
 
 const services = [
   {
@@ -52,6 +56,7 @@ export default function Services() {
           ...services.map((s) =>
             serviceSchema({ name: s.title, description: s.desc, path: '/services' }),
           ),
+          faqSchema(servicesFaqs),
         ]}
       />
       {/* Hero */}
@@ -107,6 +112,23 @@ export default function Services() {
       </section>
 
       {/* CTA */}
+      {/* FAQ */}
+      <section className="py-20 bg-white border-t border-warm-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <h2 className="font-heading text-3xl text-stone-950 mb-10">Common Service Questions</h2>
+            <div className="space-y-8">
+              {servicesFaqs.map((faq) => (
+                <div key={faq.question} className="border-b border-warm-100 pb-8 last:border-0">
+                  <h3 className="font-heading text-xl text-stone-950 mb-3">{faq.question}</h3>
+                  <p className="text-warm-600 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       <section className="py-24 bg-gradient-to-br from-clay-700 via-clay-600 to-clay-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>

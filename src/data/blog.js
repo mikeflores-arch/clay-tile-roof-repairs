@@ -28,15 +28,15 @@ Houston's average humidity of 75% means moisture management is critical. Proper 
 
 ## How to Maximize Your Roof's Lifespan
 
-1. **Annual inspections** — Catch small issues before they become expensive repairs
-2. **Prompt repairs** — A single displaced tile can lead to thousands in water damage
+1. **Annual inspections** — Catch small issues before they become expensive repairs ([our inspection service](/services) is free)
+2. **Prompt repairs** — A single displaced tile can lead to thousands in water damage — see [what repairs actually cost](/clay-tile-roof-cost)
 3. **Quality underlayment** — When replacing, invest in synthetic underlayment rated for 50+ years
 4. **Proper ventilation** — Ensure your attic has adequate airflow
 5. **Professional maintenance** — Never let unlicensed workers walk on your clay tile roof
 
 ## The Bottom Line
 
-With proper maintenance, your Houston clay tile roof should easily last 50-75 years, and potentially 100+ years if you invest in premium underlayment and stay on top of inspections. It's the best long-term roofing investment you can make for a luxury home.
+With proper maintenance, your Houston clay tile roof should easily last 50-75 years, and potentially 100+ years if you invest in premium underlayment and stay on top of inspections. It's the best long-term roofing investment you can make for a luxury home. Not sure where your roof stands? [Schedule a free inspection](/contact) and find out exactly how much life is left in it.
     `,
   },
   {
@@ -94,7 +94,7 @@ Houston's climate makes the differences more pronounced:
 
 ## Our Recommendation
 
-For Houston's luxury neighborhoods — River Oaks, Memorial Villages, West University, Bellaire, Tanglewood — **clay is the clear winner**. The higher upfront cost pays for itself many times over in lifespan, appearance, and home value. For a $1.5M+ home, the difference in roofing cost is marginal compared to the decades of additional service life.
+For Houston's luxury neighborhoods — [River Oaks](/service-area/river-oaks), [Memorial Villages](/service-area/memorial-villages), [West University](/service-area/west-university-place), [Bellaire](/service-area/bellaire), [Tanglewood](/service-area/tanglewood) — **clay is the clear winner**. The higher upfront cost pays for itself many times over in lifespan, appearance, and home value. For a $1.5M+ home, the difference in roofing cost is marginal compared to the decades of additional service life — our [2026 cost guide](/clay-tile-roof-cost) breaks down the real numbers.
 
 If budget is the primary concern and you're in a starter home or investment property, concrete tiles can be a reasonable choice. But for your forever home? Go clay.
     `,
@@ -118,7 +118,7 @@ Houston's storm season can wreak havoc on clay tile roofs. Whether it's hurrican
 
 ## Step 2: Call for Emergency Tarping
 
-If you see visible damage or active leaks, call a professional immediately for emergency tarping. This prevents secondary water damage that can cost far more than the original roof repair. Most reputable clay tile specialists can have a tarp in place within 4 hours.
+If you see visible damage or active leaks, [call a professional immediately](/contact) for emergency tarping. This prevents secondary water damage that can cost far more than the original roof repair. Most reputable clay tile specialists can have a tarp in place within 4 hours.
 
 **Important:** Don't let just anyone tarp your roof. Inexperienced workers can crack additional tiles and make the damage worse.
 
@@ -131,7 +131,7 @@ If you see visible damage or active leaks, call a professional immediately for e
 
 ## Step 4: Get a Professional Inspection
 
-Have a licensed clay tile roofing specialist inspect your roof. They should provide:
+Have a [licensed clay tile roofing specialist](/services) inspect your roof. They should provide:
 - Detailed damage report with photos
 - Itemized repair estimate
 - Documentation formatted for your insurance claim
@@ -155,7 +155,7 @@ Once your claim is approved:
 
 ## The Bottom Line
 
-Storm damage is stressful, but following these steps protects both your home and your wallet. Work with an established local clay tile specialist who has experience with Houston insurance claims, and you'll get through it smoothly.
+Storm damage is stressful, but following these steps protects both your home and your wallet. Work with an established local clay tile specialist who has experience with Houston insurance claims, and you'll get through it smoothly. If a storm just hit your neighborhood, [request an inspection now](/contact) — and know [what fair repair pricing looks like](/clay-tile-roof-cost) before the door-knockers arrive.
     `,
   },
   {
@@ -166,7 +166,7 @@ Storm damage is stressful, but following these steps protects both your home and
     readTime: '4 min read',
     category: 'Maintenance',
     content: `
-Clay tile roofs are remarkably durable, but they're not maintenance-free. Catching problems early can mean the difference between a $500 repair and a $15,000 replacement. Here are the seven warning signs Houston homeowners should never ignore.
+Clay tile roofs are remarkably durable, but they're not maintenance-free. Catching problems early can mean the difference between a [$500 repair and a $15,000 replacement](/clay-tile-roof-cost). Here are the seven warning signs Houston homeowners should never ignore.
 
 ## 1. Cracked or Broken Tiles
 
@@ -198,7 +198,7 @@ A sudden spike in cooling costs can indicate compromised roof ventilation or ins
 
 ## What to Do
 
-If you notice any of these signs, schedule a professional inspection. Don't attempt to inspect or repair clay tiles yourself — walking on them incorrectly can cause more damage than it fixes. A qualified clay tile specialist can assess the situation and recommend the most cost-effective solution.
+If you notice any of these signs, [schedule a professional inspection](/contact) — ours are free. Don't attempt to inspect or repair clay tiles yourself — walking on them incorrectly can cause more damage than it fixes. A qualified [clay tile specialist](/services) can assess the situation and recommend the most cost-effective solution.
     `,
   },
   {
@@ -261,7 +261,7 @@ Here's what deferred maintenance costs Houston homeowners:
 
 ## Maintenance Contracts
 
-For Houston's luxury homes, we recommend annual maintenance contracts that include:
+For Houston's luxury homes, we recommend [annual maintenance contracts](/services) that include:
 - Two inspections per year (spring + post-hurricane)
 - Priority emergency service
 - Minor repairs included
@@ -270,7 +270,7 @@ For Houston's luxury homes, we recommend annual maintenance contracts that inclu
 
 ## The Bottom Line
 
-The #1 rule of clay tile roof maintenance: **small problems become big problems fast in Houston's climate**. An annual inspection costing $200-400 can prevent repairs costing $5,000-15,000. It's the best ROI in home maintenance.
+The #1 rule of clay tile roof maintenance: **small problems become big problems fast in Houston's climate**. An annual inspection can prevent repairs costing $5,000-15,000 — see our [full cost breakdown](/clay-tile-roof-cost). It's the best ROI in home maintenance, and [scheduling yours](/contact) takes two minutes.
     `,
   },
 ];

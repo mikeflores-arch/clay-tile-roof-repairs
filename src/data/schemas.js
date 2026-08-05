@@ -47,8 +47,43 @@ export function localBusinessSchema() {
       { '@type': 'Place', name: 'Tanglewood' },
     ],
     priceRange: '$$',
+    // TODO(Mike): add sameAs once GBP / Facebook profiles exist —
+    // sameAs: ['<GBP maps link>', '<Facebook page>'],
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'certification',
+      name: 'GAF Certified Contractor',
+    },
+    knowsAbout: [
+      'Clay tile roofing',
+      'Concrete tile roofing',
+      'Barrel tile',
+      'Mission tile',
+      'S-tile',
+      'Tile roof underlayment replacement',
+      'Lift-and-relay tile restoration',
+      'Historic tile matching',
+      'Storm damage insurance claims',
+    ],
     description:
       "Houston's premier clay tile roof repair and restoration specialists. Over 15 years of experience serving River Oaks, Memorial Villages, West University, Bellaire, The Woodlands, Sugar Land, Katy, and Tanglewood.",
+  };
+}
+
+export function blogIndexSchema(posts) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': `${SITE_URL}/blog/#blog`,
+    name: `${SITE_NAME} Blog`,
+    url: `${SITE_URL}/blog/`,
+    publisher: { '@id': `${SITE_URL}/#business` },
+    blogPost: posts.map((p) => ({
+      '@type': 'BlogPosting',
+      headline: p.title,
+      url: url(`/blog/${p.slug}`),
+      datePublished: p.date,
+    })),
   };
 }
 

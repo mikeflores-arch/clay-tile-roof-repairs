@@ -5,6 +5,24 @@ import SEO from '../components/SEO';
 import { blogPosts } from '../data/blog';
 import { breadcrumbSchema, articleSchema } from '../data/schemas';
 
+// Inline renderer: **bold** and [text](/internal-path) markdown links.
+function renderInline(text) {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*)/g);
+  return parts.map((part, i) => {
+    const link = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(part);
+    if (link) {
+      return (
+        <Link key={i} to={link[2]} className="text-clay-600 hover:text-clay-500 font-medium underline decoration-clay-200 underline-offset-2">
+          {link[1]}
+        </Link>
+      );
+    }
+    const bold = /^\*\*([^*]+)\*\*$/.exec(part);
+    if (bold) return <strong key={i} className="text-stone-950">{bold[1]}</strong>;
+    return part;
+  });
+}
+
 // Group raw markdown-ish lines into blocks so tables render as real tables
 function parseBlocks(content) {
   const lines = content.split('\n').map((l) => l.trim()).filter(Boolean);
@@ -99,12 +117,12 @@ export default function BlogPost() {
                 if (trimmed.startsWith('- [ ] '))
                   return <div key={i} className="flex items-start gap-2 ml-4 mb-1"><span className="w-4 h-4 border border-warm-300 rounded mt-1 flex-shrink-0" /><span className="text-warm-700">{trimmed.slice(6)}</span></div>;
                 if (trimmed.startsWith('- **'))
-                  return <p key={i} className="text-warm-700 leading-relaxed ml-4 mb-1">{trimmed.slice(2).split('**').map((part, j) => j % 2 === 1 ? <strong key={j} className="text-stone-950">{part}</strong> : part)}</p>;
+                  return <p key={i} className="text-warm-700 leading-relaxed ml-4 mb-1">{renderInline(trimmed.slice(2))}</p>;
                 if (trimmed.startsWith('- '))
-                  return <p key={i} className="text-warm-700 leading-relaxed ml-4 mb-1">&#8226; {trimmed.slice(2)}</p>;
+                  return <p key={i} className="text-warm-700 leading-relaxed ml-4 mb-1">&#8226; {renderInline(trimmed.slice(2))}</p>;
                 if (trimmed.match(/^\d+\. /))
-                  return <p key={i} className="text-warm-700 leading-relaxed ml-4 mb-2">{trimmed}</p>;
-                return <p key={i} className="text-warm-700 leading-relaxed mb-4">{trimmed.split('**').map((part, j) => j % 2 === 1 ? <strong key={j} className="text-stone-950">{part}</strong> : part)}</p>;
+                  return <p key={i} className="text-warm-700 leading-relaxed ml-4 mb-2">{renderInline(trimmed)}</p>;
+                return <p key={i} className="text-warm-700 leading-relaxed mb-4">{renderInline(trimmed)}</p>;
               })}
             </article>
           </ScrollReveal>

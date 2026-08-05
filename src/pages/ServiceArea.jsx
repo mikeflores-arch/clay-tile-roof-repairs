@@ -3,7 +3,7 @@ import { ArrowRight, Phone, CheckCircle, MapPin, Home, Shield } from 'lucide-rea
 import ScrollReveal from '../components/ScrollReveal';
 import SEO from '../components/SEO';
 import { serviceAreas } from '../data/serviceAreas';
-import { breadcrumbSchema, serviceSchema } from '../data/schemas';
+import { breadcrumbSchema, serviceSchema, faqSchema } from '../data/schemas';
 
 export default function ServiceArea() {
   const { slug } = useParams();
@@ -30,6 +30,7 @@ export default function ServiceArea() {
             description: area.description,
             path: `/service-area/${area.slug}`,
           }),
+          faqSchema(area.faqs),
         ]}
       />
       {/* Hero */}
@@ -69,7 +70,11 @@ export default function ServiceArea() {
                 </h2>
                 <p className="text-warm-600 leading-relaxed text-lg mb-8">{area.areaInfo}</p>
 
-                <h3 className="font-heading text-2xl text-stone-950 mb-4">Our {area.name} Services Include</h3>
+                {area.localContext.map((paragraph) => (
+                  <p key={paragraph.slice(0, 40)} className="text-warm-600 leading-relaxed mb-6">{paragraph}</p>
+                ))}
+
+                <h3 className="font-heading text-2xl text-stone-950 mb-4 mt-10">Our {area.name} Services Include</h3>
                 <ul className="space-y-4 mb-10">
                   {area.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
@@ -151,6 +156,25 @@ export default function ServiceArea() {
               </ScrollReveal>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Area FAQ */}
+      <section className="py-20 bg-white border-t border-warm-100">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <h2 className="font-heading text-3xl text-stone-950 mb-10">
+              {area.name} Tile Roofing Questions
+            </h2>
+            <div className="space-y-8">
+              {area.faqs.map((faq) => (
+                <div key={faq.question} className="border-b border-warm-100 pb-8 last:border-0">
+                  <h3 className="font-heading text-xl text-stone-950 mb-3">{faq.question}</h3>
+                  <p className="text-warm-600 leading-relaxed">{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

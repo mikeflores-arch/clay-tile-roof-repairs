@@ -9,6 +9,8 @@ import ServiceArea from './pages/ServiceArea';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Financing from './pages/Financing';
+import About from './pages/About';
+import CostGuide from './pages/CostGuide';
 import NotFound from './pages/NotFound';
 
 function ScrollToTop() {
@@ -31,6 +33,8 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/financing" element={<Financing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/clay-tile-roof-cost" element={<CostGuide />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
