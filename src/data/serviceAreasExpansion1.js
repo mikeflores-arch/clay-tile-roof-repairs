@@ -34,7 +34,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$800K+',
     zip: '77007, 77008',
-    image: '/images/clay-tile-roof-repair.jpg',
+    image: '/images/areas/the-heights.webp',
   },
   {
     slug: 'montrose',
@@ -69,7 +69,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$700K+',
     zip: '77006, 77019',
-    image: '/images/clay-tile-repair-houston.jpg',
+    image: '/images/areas/montrose.webp',
   },
   {
     slug: 'memorial',
@@ -104,7 +104,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$1.2M+',
     zip: '77024, 77079',
-    image: '/images/clay-tile-repair-sugarland.jpg',
+    image: '/images/areas/memorial.webp',
   },
   {
     slug: 'rice-military',
@@ -139,7 +139,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$650K+',
     zip: '77007',
-    image: '/images/clay-tile-repair-pearland.jpg',
+    image: '/images/areas/rice-military.webp',
   },
   {
     slug: 'midtown',
@@ -174,7 +174,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$450K+',
     zip: '77002, 77004',
-    image: '/images/clay-tile-roof-repairs.jpg',
+    image: '/images/areas/midtown.webp',
   },
   {
     slug: 'downtown-houston',
@@ -209,7 +209,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$400K+',
     zip: '77002, 77010',
-    image: '/images/clay-tile-roof-repair-services.jpg',
+    image: '/images/areas/downtown-houston.webp',
   },
   {
     slug: 'eado',
@@ -244,7 +244,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$450K+',
     zip: '77003',
-    image: '/images/clay-tile-repair-sugar-land.jpg',
+    image: '/images/areas/eado.webp',
   },
   {
     slug: 'museum-district',
@@ -279,7 +279,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$900K+',
     zip: '77004, 77005',
-    image: '/images/clay-tile-roof-repair.jpg',
+    image: '/images/areas/museum-district.webp',
   },
   {
     slug: 'upper-kirby',
@@ -314,7 +314,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$800K+',
     zip: '77098, 77027',
-    image: '/images/clay-tile-repair-houston.jpg',
+    image: '/images/areas/upper-kirby.webp',
   },
   {
     slug: 'galleria-uptown',
@@ -349,7 +349,7 @@ export const expansionAreas1 = [
     ],
     median_home: '$700K+',
     zip: '77056, 77057',
-    image: '/images/clay-tile-repair-katy.jpg',
+    image: '/images/areas/galleria-uptown.webp',
   },
   {
     slug: 'garden-oaks',
@@ -384,6 +384,6 @@ export const expansionAreas1 = [
     ],
     median_home: '$700K+',
     zip: '77018',
-    image: '/images/clay-tile-roof-repairs.jpg',
+    image: '/images/areas/garden-oaks.webp',
   },
 ];

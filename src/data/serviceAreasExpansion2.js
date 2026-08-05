@@ -34,7 +34,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$550K+',
     zip: '77018, 77092',
-    image: '/images/clay-tile-repair-pearland.jpg',
+    image: '/images/areas/oak-forest.webp',
   },
   {
     slug: 'spring-branch',
@@ -69,7 +69,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$600K+',
     zip: '77055, 77080',
-    image: '/images/clay-tile-repair-sugarland.jpg',
+    image: '/images/areas/spring-branch.webp',
   },
   {
     slug: 'braeswood-place',
@@ -104,7 +104,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$750K+',
     zip: '77025, 77030',
-    image: '/images/clay-tile-roof-repair.jpg',
+    image: '/images/areas/braeswood-place.webp',
   },
   {
     slug: 'meyerland',
@@ -139,7 +139,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$600K+',
     zip: '77096',
-    image: '/images/clay-tile-repair-houston.jpg',
+    image: '/images/areas/meyerland.webp',
   },
   {
     slug: 'pearland',
@@ -174,7 +174,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$400K+',
     zip: '77584, 77581',
-    image: '/images/clay-tile-repair-pearland.jpg',
+    image: '/images/areas/pearland.webp',
   },
   {
     slug: 'cypress',
@@ -209,7 +209,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$450K+',
     zip: '77433, 77429',
-    image: '/images/clay-tile-roof-repairs.jpg',
+    image: '/images/areas/cypress.webp',
   },
   {
     slug: 'kingwood',
@@ -244,7 +244,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$450K+',
     zip: '77339, 77345',
-    image: '/images/clay-tile-repair-sugar-land.jpg',
+    image: '/images/areas/kingwood.webp',
   },
   {
     slug: 'clear-lake',
@@ -279,7 +279,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$400K+',
     zip: '77058, 77062',
-    image: '/images/clay-tile-roof-repair-services.jpg',
+    image: '/images/areas/clear-lake.webp',
   },
   {
     slug: 'league-city',
@@ -314,7 +314,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$450K+',
     zip: '77573',
-    image: '/images/clay-tile-repair-katy.jpg',
+    image: '/images/areas/league-city.webp',
   },
   {
     slug: 'friendswood',
@@ -349,7 +349,7 @@ export const expansionAreas2 = [
     ],
     median_home: '$500K+',
     zip: '77546',
-    image: '/images/clay-tile-roof-repair.jpg',
+    image: '/images/areas/friendswood.webp',
   },
   {
     slug: 'third-ward',
@@ -384,6 +384,6 @@ export const expansionAreas2 = [
     ],
     median_home: '$500K+',
     zip: '77004',
-    image: '/images/clay-tile-repair-houston.jpg',
+    image: '/images/areas/third-ward.webp',
   },
 ];

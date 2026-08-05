@@ -39,7 +39,7 @@ const coreAreas = [
     ],
     median_home: '$3.5M+',
     zip: '77019, 77027',
-    image: '/images/clay-tile-roof-repair.jpg',
+    image: '/images/areas/river-oaks.webp',
   },
   {
     slug: 'memorial-villages',
@@ -74,7 +74,7 @@ const coreAreas = [
     ],
     median_home: '$2.1M+',
     zip: '77024, 77079',
-    image: '/images/clay-tile-repair-houston.jpg',
+    image: '/images/areas/memorial-villages.webp',
   },
   {
     slug: 'west-university-place',
@@ -109,7 +109,7 @@ const coreAreas = [
     ],
     median_home: '$1.8M+',
     zip: '77005',
-    image: '/images/clay-tile-repair-sugarland.jpg',
+    image: '/images/areas/west-university-place.webp',
   },
   {
     slug: 'bellaire',
@@ -144,7 +144,7 @@ const coreAreas = [
     ],
     median_home: '$1.5M+',
     zip: '77401',
-    image: '/images/clay-tile-repair-pearland.jpg',
+    image: '/images/areas/bellaire.webp',
   },
   {
     slug: 'the-woodlands',
@@ -179,7 +179,7 @@ const coreAreas = [
     ],
     median_home: '$850K+',
     zip: '77380, 77381, 77382',
-    image: '/images/clay-tile-roof-repairs.jpg',
+    image: '/images/areas/the-woodlands.webp',
   },
   {
     slug: 'sugar-land',
@@ -214,7 +214,7 @@ const coreAreas = [
     ],
     median_home: '$650K+',
     zip: '77478, 77479',
-    image: '/images/clay-tile-repair-sugar-land.jpg',
+    image: '/images/areas/sugar-land.webp',
   },
   {
     slug: 'katy',
@@ -249,7 +249,7 @@ const coreAreas = [
     ],
     median_home: '$550K+',
     zip: '77494, 77450',
-    image: '/images/clay-tile-repair-katy.jpg',
+    image: '/images/areas/katy.webp',
   },
   {
     slug: 'tanglewood',
@@ -284,7 +284,7 @@ const coreAreas = [
     ],
     median_home: '$2.5M+',
     zip: '77056',
-    image: '/images/clay-tile-roof-repair-services.jpg',
+    image: '/images/areas/tanglewood.webp',
   },
 ];
 
