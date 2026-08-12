@@ -164,15 +164,20 @@ export default function Contact() {
                         <p className="text-sm text-warm-500">24-hour response</p>
                       </div>
                     </a>
-                    <div className="flex items-start gap-4">
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=3717+Revere+St,+Houston,+TX+77098"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-start gap-4 group cursor-pointer"
+                    >
                       <div className="w-10 h-10 rounded-lg bg-clay-50 flex items-center justify-center flex-shrink-0">
                         <MapPin className="w-5 h-5 text-clay-600" />
                       </div>
                       <div>
-                        <p className="font-medium text-stone-950">Houston, TX</p>
-                        <p className="text-sm text-warm-500">Serving Greater Houston</p>
+                        <p className="font-medium text-stone-950 group-hover:text-clay-600 transition-colors">3717 Revere St</p>
+                        <p className="text-sm text-warm-500">Houston, TX 77098 &middot; Serving Greater Houston</p>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </ScrollReveal>

@@ -21,12 +21,13 @@ export function localBusinessSchema() {
     email: EMAIL,
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '3717 Revere St',
       addressLocality: 'Houston',
       addressRegion: 'TX',
-      postalCode: '77019',
+      postalCode: '77098',
       addressCountry: 'US',
     },
-    geo: { '@type': 'GeoCoordinates', latitude: 29.7604, longitude: -95.3698 },
+    geo: { '@type': 'GeoCoordinates', latitude: 29.7333, longitude: -95.4162 },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

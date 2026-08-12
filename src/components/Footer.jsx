@@ -21,7 +21,7 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-clay-500" /> info@claytileroofrepairs.com
               </a>
               <p className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-clay-500" /> Houston, TX
+                <MapPin className="w-4 h-4 text-clay-500" /> 3717 Revere St, Houston, TX 77098
               </p>
             </div>
           </div>
