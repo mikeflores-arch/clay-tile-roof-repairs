@@ -208,6 +208,21 @@ export default function Contact() {
               </ScrollReveal>
             </div>
           </div>
+
+          {/* Map — Google Business Profile embed */}
+          <ScrollReveal delay={0.2}>
+            <div className="mt-12 bg-white rounded-2xl border border-warm-200 p-3">
+              <iframe
+                title="Clay Tile Roof Repairs — 3717 Revere St, Houston, TX 77098"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13857.879596011193!2d-95.4164764!3d29.735110950000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa63ac5cedc54c799%3A0xef858084b89f8d93!2sClay%20Tile%20Roof%20Repairs!5e0!3m2!1sen!2sus!4v1786646340249!5m2!1sen!2sus"
+                className="w-full h-[400px] rounded-xl block"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>

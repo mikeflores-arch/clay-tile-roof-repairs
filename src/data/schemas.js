@@ -42,8 +42,10 @@ export function localBusinessSchema() {
       ...serviceAreas.map((a) => ({ '@type': 'Place', name: a.name })),
     ],
     priceRange: '$$',
-    // TODO(Mike): add sameAs once GBP / Facebook profiles exist —
-    // sameAs: ['<GBP maps link>', '<Facebook page>'],
+    hasMap: 'https://www.google.com/maps?cid=17259342454488796563',
+    // GBP live as of Aug 2026 (place: Clay Tile Roof Repairs, 3717 Revere St)
+    // TODO(Mike): add Facebook page to sameAs when one exists
+    sameAs: ['https://www.google.com/maps?cid=17259342454488796563'],
     hasCredential: {
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: 'certification',
