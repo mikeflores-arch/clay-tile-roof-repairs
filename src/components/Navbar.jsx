@@ -65,6 +65,9 @@ export default function Navbar() {
             <Link to="/financing" className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isActive('/financing') ? 'text-clay-400 bg-clay-900/30' : 'text-warm-300 hover:text-warm-50 hover:bg-white/5'}`}>
               Financing
             </Link>
+            <Link to="/reviews" className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isActive('/reviews') ? 'text-clay-400 bg-clay-900/30' : 'text-warm-300 hover:text-warm-50 hover:bg-white/5'}`}>
+              Reviews
+            </Link>
             <Link to="/contact" className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${isActive('/contact') ? 'text-clay-400 bg-clay-900/30' : 'text-warm-300 hover:text-warm-50 hover:bg-white/5'}`}>
               Contact
             </Link>
@@ -103,6 +106,7 @@ export default function Navbar() {
             <Link to="/blog" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-lg text-warm-200 hover:bg-clay-900/20 transition-colors">Blog</Link>
             <Link to="/about" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-lg text-warm-200 hover:bg-clay-900/20 transition-colors">About</Link>
             <Link to="/financing" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-lg text-warm-200 hover:bg-clay-900/20 transition-colors">Financing</Link>
+            <Link to="/reviews" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-lg text-warm-200 hover:bg-clay-900/20 transition-colors">Reviews</Link>
             <Link to="/contact" onClick={() => setMobileOpen(false)} className="block px-4 py-3 rounded-lg text-warm-200 hover:bg-clay-900/20 transition-colors">Contact</Link>
             <a href="tel:+12819369337" className="block px-4 py-3 mt-2 bg-clay-600 text-white text-center rounded-lg font-semibold">
               Call (281) 936-9337

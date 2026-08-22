@@ -38,6 +38,7 @@ export default function Footer() {
               <li><Link to="/services" className="hover:text-clay-400 transition-colors">New Installations</Link></li>
               <li><Link to="/financing" className="hover:text-clay-400 transition-colors">Financing Options</Link></li>
               <li><Link to="/about" className="hover:text-clay-400 transition-colors">About Us</Link></li>
+              <li><Link to="/reviews" className="hover:text-clay-400 transition-colors">Customer Reviews</Link></li>
               <li><Link to="/clay-tile-roof-cost" className="hover:text-clay-400 transition-colors">Cost Guide</Link></li>
               <li><Link to="/blog" className="hover:text-clay-400 transition-colors">Roofing Blog</Link></li>
             </ul>

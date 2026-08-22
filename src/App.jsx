@@ -9,6 +9,7 @@ import ServiceArea from './pages/ServiceArea';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
 import Financing from './pages/Financing';
+import Reviews from './pages/Reviews';
 import About from './pages/About';
 import CostGuide from './pages/CostGuide';
 import NotFound from './pages/NotFound';
@@ -33,6 +34,7 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/financing" element={<Financing />} />
+          <Route path="/reviews" element={<Reviews />} />
           <Route path="/about" element={<About />} />
           <Route path="/clay-tile-roof-cost" element={<CostGuide />} />
           <Route path="*" element={<NotFound />} />
